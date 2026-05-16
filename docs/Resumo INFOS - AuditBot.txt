@@ -1,0 +1,429 @@
+# README.TXT — Projeto AuditBot
+
+## 1. Sobre o Projeto
+
+Nome do Projeto: AuditBot
+Tema: Finanças — Conciliador Inteligente
+
+O AuditBot é um sistema acadêmico desenvolvido para automatizar processos financeiros relacionados ao controle de contas a pagar e a receber.
+
+A proposta do projeto é reduzir o trabalho manual no processamento de notas fiscais, automatizando tarefas como leitura de documentos, validação de dados, identificação de divergências e geração de relatórios.
+
+O sistema utiliza conceitos como OCR, conciliação financeira e categorização de gastos, sempre considerando um contexto de MVP acadêmico, com escopo reduzido e foco em aprendizado.
+
+---
+
+# 2. Objetivo do Projeto
+
+Automatizar processos financeiros relacionados a notas fiscais, aumentando a eficiência operacional e reduzindo erros manuais.
+
+Objetivos principais:
+
+* Automatizar leitura de notas fiscais
+* Validar e organizar dados financeiros
+* Realizar conciliação com pedidos de compra
+* Identificar divergências automaticamente
+* Classificar gastos
+* Gerar relatórios financeiros
+
+---
+
+# 3. Principais Funcionalidades
+
+* Upload de notas fiscais
+* Extração automática de dados via OCR
+* Visualização dos dados extraídos
+* Edição manual dos dados
+* Conciliação com pedidos de compra
+* Identificação de divergências
+* Classificação de gastos
+* Geração de relatórios
+* Exportação de relatórios
+* Armazenamento de dados
+
+---
+
+# 4. Processos BPMN
+
+O projeto possui 6 processos principais modelados em BPMN:
+
+1. Processamento de Nota Fiscal
+2. Conciliação com Pedido de Compra
+3. Geração de Relatórios
+4. Identificação de Divergências
+5. Classificação de Gastos
+6. Armazenamento e Auditoria
+
+Os processos utilizam elementos BPMN como:
+
+* Eventos de início, intermediários e fim
+* Gateways
+* Tarefas manuais, de usuário e de serviço
+* Subprocessos
+* Raias
+* Objetos de dados
+* Armazenamento de dados
+* Anotações
+
+Ferramenta utilizada:
+
+* Bizagi
+
+---
+
+# 5. Requisitos Funcionais
+
+## Processamento de Notas Fiscais
+
+RF-01 — Upload de notas fiscais
+O sistema deve permitir o envio de notas fiscais.
+
+RF-02 — Extração de dados
+O sistema deve extrair dados das notas fiscais.
+
+RF-03 — Edição de dados
+O sistema deve permitir editar os dados.
+
+---
+
+## Conciliação de Dados
+
+RF-04 — Conciliação de dados
+O sistema deve comparar dados com pedidos de compra.
+
+---
+
+## Divergências
+
+RF-05 — Identificação de divergências
+O sistema deve identificar divergências.
+
+---
+
+## Classificação de Gastos
+
+RF-06 — Classificação de gastos
+O sistema deve classificar gastos.
+
+---
+
+## Relatórios
+
+RF-07 — Geração de relatórios
+O sistema deve gerar relatórios.
+
+---
+
+## Armazenamento e Controle
+
+RF-08 — Armazenamento de dados
+O sistema deve armazenar dados.
+
+---
+
+# 6. Requisitos Não Funcionais
+
+## Segurança
+
+RNF-01 — Segurança de Upload
+Os arquivos devem passar por validação antes do processamento.
+
+RNF-02 — Trilha de Auditoria
+O sistema deve registrar ações básicas realizadas pelos usuários.
+
+RNF-03 — Conformidade com LGPD
+O sistema deve garantir armazenamento seguro dos dados.
+
+---
+
+## Disponibilidade
+
+RNF-04 — Monitoramento
+O sistema deve informar falhas ou lentidão no processamento.
+
+---
+
+## Portabilidade
+
+RNF-05 — Design Responsivo
+A interface deve funcionar em diferentes dispositivos.
+
+RNF-06 — Independência de Infraestrutura
+O sistema deve funcionar em ambiente web.
+
+---
+
+## Usabilidade
+
+RNF-07 — Facilidade de Aprendizado
+O sistema deve possuir navegação simples.
+
+RNF-08 — Consistência de Interface
+Os módulos devem seguir o mesmo padrão visual.
+
+RNF-09 — Tempo de Resposta em Lote
+O sistema deve processar múltiplas notas em tempo aceitável.
+
+---
+
+## Desempenho
+
+RNF-10 — Processamento em Lote
+O sistema deve processar dados de forma eficiente.
+
+RNF-11 — Tempo de Carregamento
+Dashboards devem carregar rapidamente.
+
+RNF-12 — Tempo de Resposta de Consultas
+Consultas devem possuir resposta rápida.
+
+---
+
+# 7. Histórias de Usuário
+
+US-01 — Upload de Nota Fiscal
+Como usuário, quero enviar uma nota fiscal para que o sistema processe seus dados automaticamente.
+
+US-02 — Validação de Dados Extraídos
+Como usuário, quero visualizar e corrigir os dados extraídos para garantir que estejam corretos.
+
+US-03 — Conciliação de Nota com Pedido
+Como usuário, quero comparar a nota fiscal com o pedido de compra para identificar possíveis divergências.
+
+US-04 — Classificação de Gastos
+Como usuário, quero classificar os gastos para organizar melhor as informações financeiras.
+
+US-05 — Geração de Relatórios
+Como usuário, quero gerar relatórios para acompanhar os dados processados.
+
+---
+
+# 8. Planning Poker
+
+As histórias de usuário foram estimadas utilizando a técnica Planning Poker.
+
+Foi utilizada a escala de Fibonacci:
+
+* 1 → Muito simples
+* 2 → Fácil
+* 3 → Médio
+* 5 → Mais complexo
+
+Tabela de estimativas:
+
+| ID    | Complexidade | Prioridade |
+| ----- | ------------ | ---------- |
+| US-01 | 3            | Alta       |
+| US-02 | 5            | Alta       |
+| US-03 | 5            | Alta       |
+| US-04 | 3            | Baixa      |
+| US-05 | 2            | Baixa      |
+
+---
+
+# 9. Critérios de Aceite
+
+## US-01 — Upload de Nota Fiscal
+
+* Permitir envio de arquivos PDF
+* Exibir erro para arquivos inválidos
+* Confirmar envio com sucesso
+
+---
+
+## US-02 — Validação de Dados Extraídos
+
+* Exibir dados extraídos
+* Permitir edição dos dados
+* Salvar alterações
+
+---
+
+## US-03 — Conciliação
+
+* Comparar nota e pedido
+* Indicar divergências
+* Exibir status da conciliação
+
+---
+
+## US-04 — Classificação de Gastos
+
+* Sugerir categoria
+* Permitir alteração da categoria
+* Salvar categoria definida
+
+---
+
+## US-05 — Geração de Relatórios
+
+* Gerar relatórios
+* Permitir exportação
+* Exibir dados organizados
+
+---
+
+# 10. Product Backlog Inicial
+
+* Leitura de NF através de OCR
+* Automatizar contas a pagar e a receber
+
+---
+
+# 11. Product Backlog Atualizado
+
+* Upload de notas fiscais
+* Extração automática de dados
+* Visualização dos dados extraídos
+* Edição manual dos dados
+* Conciliação com pedido de compra
+* Identificação de divergências
+* Classificação de gastos
+* Geração de relatórios
+* Exportação de relatórios
+* Armazenamento de dados
+
+---
+
+# 12. Sprint 1
+
+Funcionalidades:
+
+* Extração de dados básicos
+* Exportação de relatórios
+* Identificação de divergências
+
+---
+
+# 13. Sprint 3
+
+Foco da Sprint:
+
+* Modelagem BPMN
+* Definição das funcionalidades
+* Fluxos do sistema
+* Critérios de aceite
+
+Funcionalidades da Sprint:
+
+* Fluxo de envio de notas fiscais
+* Visualização e edição de dados
+* Conciliação entre nota e pedido
+* Classificação de gastos
+* Geração de relatórios
+
+---
+
+14. ANÁLISE DE STAKEHOLDERS
+
+| Stakeholder           | Poder | Interesse | Classificação | Estratégia              |
+|-----------------------|--------|------------|----------------|--------------------------|
+| Gerente Financeiro    | Alto   | Alto       | Promotor       | Gerenciar de perto       |
+| Analista Financeiro   | Médio  | Alto       | Defensor       | Manter informado         |
+| Contador              | Alto   | Médio      | Latente        | Manter satisfeito        |
+| Fornecedor            | Baixo  | Médio      | Defensor       | Informar periodicamente  |
+| Professor Orientador  | Alto   | Alto       | Promotor       | Validar entregas         |
+
+Estratégias Utilizadas:
+- Promotores → acompanhamento próximo
+- Defensores → manter informados
+- Latentes → atualizações estratégicas
+- Apáticos → monitoramento simples
+
+
+15. DIAGRAMA DE AFINIDADES
+
+Grupo: Processamento de Documentos
+- Upload de NF
+- OCR
+- Validação de arquivos
+- Extração de dados
+
+Grupo: Conciliação Financeira
+- Comparação de dados
+- Identificação de divergências
+- Validação financeira
+
+Grupo: Classificação de Gastos
+- Categorização
+- Organização financeira
+- Rateio simples
+
+Grupo: Relatórios
+- Exportação
+- Dashboard
+- Histórico financeiro
+
+Grupo: Controle e Auditoria
+- Logs
+- Histórico
+- Armazenamento
+
+
+---
+
+# 16. Equipe do Projeto
+
+* Carlos — Product Owner
+* Gabriel — Scrum Master
+* Mary — Desenvolvedora
+* Davi — Desenvolvedor
+
+---
+
+# 17. Ferramentas Utilizadas
+
+* Bizagi
+* Trello
+* Figma
+* VSCode
+* Canva
+* Gamma IA
+* Miro
+
+---
+
+# 18. Identidade Visual
+
+Cores:
+
+* Azul
+* Branco
+
+Estilo:
+
+* Clean
+* Moderno
+
+---
+
+# 19. Restrições do Projeto
+
+* Projeto acadêmico
+* Escopo reduzido
+* MVP
+* Sem orçamento real
+* Equipe pequena
+* Sem integrações complexas
+* Utilização de Python e SQL
+* Necessidade de seguir conceitos básicos da LGPD
+
+---
+
+# 20. Premissas
+
+* A equipe permanecerá disponível durante o projeto
+* As notas fiscais estarão em formato digital
+* As ferramentas estarão disponíveis para uso
+* O projeto será focado apenas no MVP
+* O sistema será desenvolvido apenas para fins acadêmicos
+
+---
+
+# 21. Considerações Finais
+
+O AuditBot foi desenvolvido como um projeto acadêmico focado em demonstrar conceitos de automação financeira, modelagem de processos e metodologias ágeis.
+
+O projeto possui foco em aprendizado, organização de requisitos, modelagem BPMN e definição de funcionalidades viáveis para um MVP de faculdade.
+
+README desenvolvido para apoio da equipe durante o desenvolvimento e apresentação do projeto.
